@@ -5,7 +5,7 @@ Messdatenauswertung
 """
 
 # %% Init
-# import os
+import os
 import time
 import datetime
 import numpy as np
@@ -22,6 +22,8 @@ DEVICE = {"d1": "1N4001",
           "pmos": "BS250"}
 
 TSTAMP = datetime.datetime.now()
+BASEDIR = "./data/"
+list_open = open(os.path.join(BASEDIR, '*.csv'))
 Data_IN1 = "data/IN1_" + DEVICE["d1"] + "_ELIE1" + str(TSTAMP.strftime("_%Y-%m-%d_%H-%M"))
 Data_IN2 = "data/IN2_" + DEVICE["d1"] + "_ELIE1" + str(TSTAMP.strftime("_%Y-%m-%d_%H-%M"))
 

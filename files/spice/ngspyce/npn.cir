@@ -1,0 +1,9 @@
+.title NPN Curve Trace
+
+.include bc337.cir
+
+Vbb Vb 0 DC 0
+Vcc Vc 0 DC 10
+Q1 Vc Vb 0 QBC337AP 
+
+.end

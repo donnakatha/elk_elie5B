@@ -22,7 +22,7 @@ LABDESK = {
     "ELIE6": "192.168.111.186",
 }
 
-IP = LABDESK["ELIE2"]  # IP des Laborplatzes
+IP = LABDESK["ELIE5"]  # IP des Laborplatzes
 rp = scpi.scpi(IP)
 
 # size in samples 16 Bit
@@ -81,7 +81,6 @@ start_address = int(rp.txrx_txt("ACQ:AXI:START?"))
 size = int(rp.txrx_txt("ACQ:AXI:SIZE?"))
 start_address2 = round(start_address + size / 2)
 
-
 rp.tx_txt(f"ACQ:AXI:DEC {dec}")  # Decimation
 # rp.tx_txt(f"ACQ:DEC {dec}")  # Decimation (1, 8, 16, 64, 1024, 8192)
 
@@ -124,7 +123,7 @@ while 1:
         break
 
 # Data Acquisition
-for meas in range(1):
+for meas in range(10):
 
     # Input IN1
     # time.sleep(0.1)  # in seconds
@@ -154,8 +153,8 @@ rp.tx_txt("ACQ:STOP")
 rp.tx_txt("OUTPUT1:STATE OFF")
 
 # %% Daten als Datei speichern
-Data_IN1 = "data/IN1_" + DEVICE["d1"] + "_ELIE2" + str(TSTAMP.strftime("_%Y-%m-%d_%H-%M"))
-Data_IN2 = "data/IN2_" + DEVICE["d1"] + "_ELIE2" + str(TSTAMP.strftime("_%Y-%m-%d_%H-%M"))
+Data_IN1 = "data/diode/IN1_" + DEVICE["d1"] + "_ELIE5" + str(TSTAMP.strftime("_%Y-%m-%d_%H-%M"))
+Data_IN2 = "data/diode/IN2_" + DEVICE["d1"] + "_ELIE5" + str(TSTAMP.strftime("_%Y-%m-%d_%H-%M"))
 
 
 # %% Speichern als CSV/TSV (comma/tab-seperated-values)

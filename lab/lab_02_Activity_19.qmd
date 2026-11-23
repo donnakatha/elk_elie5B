@@ -141,6 +141,15 @@ größer 0.7 V ist, beginnt die Diode zu leiten und der Strom wird nur durch den
 
 ### Messungen mit SCPI-Server und Python
 
+Wie das STEMlab mittels SCPI zu steuern ist, sehen Sie bitte hier: 
+
+* [Programming and remote-control tools](https://redpitaya.readthedocs.io/en/latest/appsFeatures/remoteControl/remoteAndProg.html)
+
+Code-Beispiele finden Sie im Repositorium:
+
+* [redpitaya_scpi](https://github.com/mimeiners/elk/tree/5a20ffcc7d321ce9eb40d920a1e7b8261c897140/files/meas/redpitaya_scpi)
+
+
 ::: {#tip-ip-scpi .callout-tip}
 _IP-Adressen der STEMLabs für den Zugriff via SCPI_
 
@@ -151,3 +160,4 @@ _IP-Adressen der STEMLabs für den Zugriff via SCPI_
 * Laborplatz ELIE5: 192.168.111.185
 * Laborplatz ELIE6: 192.168.111.186
 :::
+
